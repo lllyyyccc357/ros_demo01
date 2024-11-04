@@ -19,7 +19,7 @@ if __name__ == "__main__":
     m.PWM=90;
 
     #4.编写消息发布逻辑
-    rate = rospy.Rate(1)
+    rate = rospy.Rate(0.8)
     while not rospy.is_shutdown():
         pub.publish(m)  #发布消息
         rate.sleep()  #休眠

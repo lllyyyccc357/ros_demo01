@@ -15,8 +15,9 @@ pwm_pin = [5,6, 12, 13, 16, 19, 20, 21]
 def doMotor(m):
     rospy.loginfo("motor msg: %d, %.2f",m.num,m.PWM)
     pwm=GPIO.PWM(m.num,320)
-    pwm.start()
+    pwm.start(m.PWM)
     time.sleep(0.5)
+    pwm.ChangeDutyCycle(0)
 
 
 
@@ -27,7 +28,8 @@ if __name__ == "__main__":
 
     GPIO.setmode(GPIO.BCM)   #定义树莓派gpio引脚以BCM方式编号
     GPIO.setup(pwm_pin,GPIO.OUT)  #使能gpio口为输出
-    pwm = GPIO.PWM(pwm_pin,320)   #定义pwm输出频率
+    for i in range(0,5):
+        pwm = GPIO.PWM(pwm_pin[i],320)   #定义pwm输出频率
 
-    sub = rospy.Subscriber("motor_msg",Person,doMotor,queue_size=10)
+    sub = rospy.Subscriber("motor_msg",motor,doMotor,queue_size=10)
     rospy.spin() #4.循环
