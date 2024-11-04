@@ -1,2 +1,2 @@
-can_receive:common:imu_estimation
+can_receive:common:imu_estimation:motor_control
 -DCATKIN_DEVEL_PREFIX=/home/ubuntulyc2/home/ROS_File/can_demo01/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntulyc2/home/ROS_File/can_demo01/install -G Unix Makefiles

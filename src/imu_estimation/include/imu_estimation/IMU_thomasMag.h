@@ -19,7 +19,7 @@ public:
     double dt;
     IMU_thomas(int n,int frequency=400)
     {
-        NUM=i;;// the device num
+        NUM=n;// the device num
         dt=1/frequency;
         xPriori=Eigen::Vector4d::Zero(4,1);
         

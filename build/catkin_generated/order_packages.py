@@ -2,4 +2,4 @@
 source_root_dir = '/home/ubuntulyc2/home/ROS_File/can_demo01/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/opt/ros/noetic'.split(';') if '/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/ubuntulyc2/home/ROS_File/can_demo01/devel;/opt/ros/noetic'.split(';') if '/home/ubuntulyc2/home/ROS_File/can_demo01/devel;/opt/ros/noetic' != '' else []

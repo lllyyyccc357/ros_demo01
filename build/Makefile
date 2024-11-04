@@ -311,6 +311,19 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f common/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make common/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -324,17 +337,17 @@ rosgraph_msgs_generate_messages_lisp/fast:
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_eus
+# Target rules for targets named _common_generate_messages_check_deps_motor
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
-.PHONY : rosgraph_msgs_generate_messages_eus
+_common_generate_messages_check_deps_motor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _common_generate_messages_check_deps_motor
+.PHONY : _common_generate_messages_check_deps_motor
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f common/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make common/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
+_common_generate_messages_check_deps_motor/fast:
+	$(MAKE) -f common/CMakeFiles/_common_generate_messages_check_deps_motor.dir/build.make common/CMakeFiles/_common_generate_messages_check_deps_motor.dir/build
+.PHONY : _common_generate_messages_check_deps_motor/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -685,8 +698,9 @@ help:
 	@echo "... gtest"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... _common_generate_messages_check_deps_motor"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... common_genlisp"
 	@echo "... roscpp_generate_messages_nodejs"

@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntulyc2/home/ROS_File/can_demo01/build
 include common/CMakeFiles/common_generate_messages_eus.dir/progress.make
 
 common/CMakeFiles/common_generate_messages_eus: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg/data.l
+common/CMakeFiles/common_generate_messages_eus: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg/motor.l
 common/CMakeFiles/common_generate_messages_eus: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/manifest.l
 
 
@@ -62,12 +63,18 @@ common/CMakeFiles/common_generate_messages_eus: /home/ubuntulyc2/home/ROS_File/c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from common/data.msg"
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg
 
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg/motor.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg/motor.l: /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from common/motor.msg"
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg
+
 /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for common"
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common common std_msgs
 
 common_generate_messages_eus: common/CMakeFiles/common_generate_messages_eus
 common_generate_messages_eus: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg/data.l
+common_generate_messages_eus: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/msg/motor.l
 common_generate_messages_eus: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/roseus/ros/common/manifest.l
 common_generate_messages_eus: common/CMakeFiles/common_generate_messages_eus.dir/build.make
 

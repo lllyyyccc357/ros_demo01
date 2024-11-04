@@ -38,7 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common/msg" TYPE FILE FILES "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common/msg" TYPE FILE FILES
+    "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg"
+    "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

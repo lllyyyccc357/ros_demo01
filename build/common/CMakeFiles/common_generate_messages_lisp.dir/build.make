@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntulyc2/home/ROS_File/can_demo01/build
 include common/CMakeFiles/common_generate_messages_lisp.dir/progress.make
 
 common/CMakeFiles/common_generate_messages_lisp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/data.lisp
+common/CMakeFiles/common_generate_messages_lisp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/motor.lisp
 
 
 /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/data.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +62,14 @@ common/CMakeFiles/common_generate_messages_lisp: /home/ubuntulyc2/home/ROS_File/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from common/data.msg"
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg
 
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/motor.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/motor.lisp: /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from common/motor.msg"
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg
+
 common_generate_messages_lisp: common/CMakeFiles/common_generate_messages_lisp
 common_generate_messages_lisp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/data.lisp
+common_generate_messages_lisp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/motor.lisp
 common_generate_messages_lisp: common/CMakeFiles/common_generate_messages_lisp.dir/build.make
 
 .PHONY : common_generate_messages_lisp

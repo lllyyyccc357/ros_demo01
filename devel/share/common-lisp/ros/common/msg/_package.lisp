@@ -3,5 +3,7 @@
   (:export
    "<DATA>"
    "DATA"
+   "<MOTOR>"
+   "MOTOR"
   ))
 

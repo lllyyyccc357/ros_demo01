@@ -134,6 +134,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ubuntulyc2/home/ROS_File/can_demo01/build/common/cmake_install.cmake")
   include("/home/ubuntulyc2/home/ROS_File/can_demo01/build/can_receive/cmake_install.cmake")
   include("/home/ubuntulyc2/home/ROS_File/can_demo01/build/imu_estimation/cmake_install.cmake")
+  include("/home/ubuntulyc2/home/ROS_File/can_demo01/build/motor_control/cmake_install.cmake")
 
 endif()
 
