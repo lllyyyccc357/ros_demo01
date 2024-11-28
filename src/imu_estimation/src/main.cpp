@@ -8,35 +8,12 @@
 using namespace std;
 
 const int N=2;
-IMU_thomas IMU[N]=
-{
-    IMU_thomas(0,400),
-    IMU_thomas(1,400)
-};
-void doGyro(const common::data::ConstPtr& p_gyro){
-    int number=p_gyro->num;
-    if(IMU[number].InitTrue){
 
-    }else{
-        IMU[number].IMU_init();
-    }
-}
-void doAcc(const common::data::ConstPtr& p_acc){
-    int number=p_acc->num;
-    if(IMU[number].InitTrue){
-        
-    }else{
-        IMU[number].Acc_init << p_acc->dataX,p_acc->dataY,p_acc->dataZ;
-    }
-}
-void doMag(const common::data::ConstPtr& p_mag){
-    int number=p_mag->num;
-    if(IMU[number].InitTrue){
-        
-    }else{
-        IMU[number].Acc_init << p_mag->dataX,p_mag->dataY,p_mag->dataZ;
-    }
-}
+
+IMU_thomas IMU[N];
+void doGyro(const common::data::ConstPtr& p_gyro);
+void doAcc(const common::data::ConstPtr& p_acc);
+void doMag(const common::data::ConstPtr& p_mag);
 int main(int argc, char **argv) {
 
     for(int i=0;i<N;i++)
@@ -53,4 +30,33 @@ int main(int argc, char **argv) {
     ros::spin();
 
     return 0;
+}
+void doGyro(const common::data::ConstPtr& p_gyro)
+{
+    int number=p_gyro->num;
+    if(~IMU[number].InitTrue){
+        IMU[number].IMU_init();
+    }
+    if(IMU[number].InitTrue){
+        IMU[number].Gyro << p_gyro->dataX,p_gyro->dataY,p_gyro->dataZ;
+        IMU[number].Gyro_update();
+    }
+}
+void doAcc(const common::data::ConstPtr& p_acc)
+{
+    int number=p_acc->num;
+    if(~IMU[number].InitTrue){
+        IMU[number].Acc_init << p_acc->dataX,p_acc->dataY,p_acc->dataZ;
+    }else{
+        IMU[number].Acc << p_acc->dataX,p_acc->dataY,p_acc->dataZ;
+    }
+}
+void doMag(const common::data::ConstPtr& p_mag)
+{
+    int number=p_mag->num;
+    if(~IMU[number].InitTrue){
+        IMU[number].Mag_init << p_mag->dataX,p_mag->dataY,p_mag->dataZ;
+    }else{
+        IMU[number].Mag << p_mag->dataX,p_mag->dataY,p_mag->dataZ;
+    }
 }
