@@ -40,7 +40,9 @@ void doGyro(const common::data::ConstPtr& p_gyro)
     if(IMU[number].InitTrue){
         IMU[number].Gyro << p_gyro->dataX,p_gyro->dataY,p_gyro->dataZ;
         IMU[number].Gyro_update();
+        std::cout <<IMU[number].euler_angles<<std::endl;
     }
+    
 }
 void doAcc(const common::data::ConstPtr& p_acc)
 {
@@ -49,6 +51,8 @@ void doAcc(const common::data::ConstPtr& p_acc)
         IMU[number].Acc_init << p_acc->dataX,p_acc->dataY,p_acc->dataZ;
     }else{
         IMU[number].Acc << p_acc->dataX,p_acc->dataY,p_acc->dataZ;
+        IMU[number].Acc_update();
+        std::cout <<IMU[number].euler_angles<<std::endl;
     }
 }
 void doMag(const common::data::ConstPtr& p_mag)
@@ -58,5 +62,7 @@ void doMag(const common::data::ConstPtr& p_mag)
         IMU[number].Mag_init << p_mag->dataX,p_mag->dataY,p_mag->dataZ;
     }else{
         IMU[number].Mag << p_mag->dataX,p_mag->dataY,p_mag->dataZ;
+        IMU[number].Mag_update();
+        std::cout <<IMU[number].euler_angles<<std::endl;
     }
 }
