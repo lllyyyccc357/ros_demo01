@@ -12,7 +12,7 @@ mkdir build
 cd build
 cmake ..
 sudo make install
-sudo cp -r /usr/local/include/eigen3/Eigen /usr/local/include 
+sudo cp -r /usr/include/eigen3/Eigen /usr/include 
 
 ## use
 ~~~
