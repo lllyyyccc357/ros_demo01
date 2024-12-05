@@ -1,8 +1,0 @@
-prefix=/home/ubuntulyc2/home/ROS_File/can_demo01/install
-
-Name: imu_estimation
-Description: Description of imu_estimation
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy std_msgs message_runtime

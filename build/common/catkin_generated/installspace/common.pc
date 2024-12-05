@@ -1,8 +1,0 @@
-prefix=/home/ubuntulyc2/home/ROS_File/can_demo01/install
-
-Name: common
-Description: Description of common
-Version: 0.0.0
-Cflags: -I${prefix}/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include
-Libs: -L${prefix}/lib 
-Requires: 
