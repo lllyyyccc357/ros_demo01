@@ -17,6 +17,7 @@ sudo cp -r /usr/include/eigen3/Eigen /usr/include
 ~~~
 ## use
 ~~~
+cd ros_demo01
 catkin_make --pkg common
 catkin_make
 ~~~
