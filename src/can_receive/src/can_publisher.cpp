@@ -110,7 +110,7 @@ int main(int argc, char  *argv[])
             }else if(flag==3){
                 pub_mag.publish(_data);
             }
-            if(flag==2)
+            if(flag==3)
             ROS_INFO("The msg : name: %d num: %d X: %f Y %f Z %f",_data.name,_data.num,_data.dataX,_data.dataY,_data.dataZ);
         }
     }

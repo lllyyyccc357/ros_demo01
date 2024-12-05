@@ -104,6 +104,11 @@ public:
                 Gyro[1],-Gyro[0],0,Gyro[2],
                 -Gyro[0],-Gyro[1],-Gyro[2],0;
         omega=0.5*omega;
+                    CSI<<qin[3],-qin[2],qin[1],
+                qin[2],qin[3],-qin[0],
+                -qin[1],qin[0],qin[3],
+                -qin[0],-qin[1],-qin[2];
+        Q=(dt/2)*(dt/2)*CSI*SIGMA_g*CSI.transpose();
         Eigen::Matrix4d F = (omega * dt).exp();
         x=F*x;
         P=F*P*F.transpose()+Q;
@@ -168,7 +173,6 @@ public:
             if (thresh < 1e-13) {
                 break;
             }
-            x_tlast = x_t;
         }
         x_t /= x_t.norm();
         x=x_t;
@@ -256,7 +260,6 @@ public:
             if (thresh < 1e-16) {
                 break;
             }
-            x_tlast = x_t;
         }
         x_t /= x_t.norm();
         x=x_t;
@@ -265,16 +268,27 @@ public:
     }
     void x2Euler()
     {
-         Eigen::Quaterniond quat(x[3], x[0], x[1], x[2]); // w, x, y, z
+         Eigen::Quaterniond q(x[3], x[0], x[1], x[2]); // w, x, y, z
 
         // 归一化四元数（确保其表示有效的旋转）
-        quat.normalize();
+        q.normalize();
 
-        // 将四元数转换为旋转矩阵
-        Eigen::Matrix3d rotation_matrix = quat.toRotationMatrix();
+            // roll (x-axis rotation)
+        double sinr_cosp = 2 * (q.w() * q.x() + q.y() * q.z());
+        double cosr_cosp = 1 - 2 * (q.x() * q.x() + q.y() * q.y());
+        euler_angles(2) = std::atan2(sinr_cosp, cosr_cosp);
 
-        // 提取欧拉角 (ZYX 顺序：yaw, pitch, roll)
-        euler_angles = rotation_matrix.eulerAngles(2, 0, 1); // ZXY 顺序
+        // pitch (y-axis rotation)
+        double sinp = 2 * (q.w() * q.y() - q.z() * q.x());
+        if (std::abs(sinp) >= 1)
+            euler_angles(1) = std::copysign(M_PI / 2, sinp); // use 90 degrees if out of range
+        else
+            euler_angles(1) = std::asin(sinp);
+
+        // yaw (z-axis rotation)
+        double siny_cosp = 2 * (q.w() * q.z() + q.x() * q.y());
+        double cosy_cosp = 1 - 2 * (q.y() * q.y() + q.z() * q.z());
+        euler_angles(0) = std::atan2(siny_cosp, cosy_cosp);
     }
 };
 

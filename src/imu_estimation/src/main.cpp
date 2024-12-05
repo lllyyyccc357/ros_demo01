@@ -52,7 +52,7 @@ void doAcc(const common::data::ConstPtr& p_acc)
     }else{
         IMU[number].Acc << p_acc->dataX,p_acc->dataY,p_acc->dataZ;
         IMU[number].Acc_update();
-        std::cout <<IMU[number].euler_angles<<std::endl;
+        ROS_INFO("yaw:%lf,roll:%lf,pitch:%lf",IMU[number].euler_angles[0],IMU[number].euler_angles[1],IMU[number].euler_angles[2]);
     }
 }
 void doMag(const common::data::ConstPtr& p_mag)
