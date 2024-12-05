@@ -289,6 +289,7 @@ public:
         double siny_cosp = 2 * (q.w() * q.z() + q.x() * q.y());
         double cosy_cosp = 1 - 2 * (q.y() * q.y() + q.z() * q.z());
         euler_angles(0) = std::atan2(siny_cosp, cosy_cosp);
+        euler_angles*=(180/3.14);
     }
 };
 

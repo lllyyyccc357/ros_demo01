@@ -40,7 +40,7 @@ void doGyro(const common::data::ConstPtr& p_gyro)
     if(IMU[number].InitTrue){
         IMU[number].Gyro << p_gyro->dataX,p_gyro->dataY,p_gyro->dataZ;
         IMU[number].Gyro_update();
-        std::cout <<IMU[number].euler_angles<<std::endl;
+        ROS_INFO("yaw:%lf,pitch:%lf,roll:%lf",IMU[number].euler_angles[0],IMU[number].euler_angles[1],IMU[number].euler_angles[2]);
     }
     
 }
@@ -52,7 +52,7 @@ void doAcc(const common::data::ConstPtr& p_acc)
     }else{
         IMU[number].Acc << p_acc->dataX,p_acc->dataY,p_acc->dataZ;
         IMU[number].Acc_update();
-        ROS_INFO("yaw:%lf,roll:%lf,pitch:%lf",IMU[number].euler_angles[0],IMU[number].euler_angles[1],IMU[number].euler_angles[2]);
+        ROS_INFO("yaw:%lf,pitch:%lf,roll:%lf",IMU[number].euler_angles[0],IMU[number].euler_angles[1],IMU[number].euler_angles[2]);
     }
 }
 void doMag(const common::data::ConstPtr& p_mag)
@@ -63,6 +63,6 @@ void doMag(const common::data::ConstPtr& p_mag)
     }else{
         IMU[number].Mag << p_mag->dataX,p_mag->dataY,p_mag->dataZ;
         IMU[number].Mag_update();
-        std::cout <<IMU[number].euler_angles<<std::endl;
+        ROS_INFO("yaw:%lf,pitch:%lf,roll:%lf",IMU[number].euler_angles[0],IMU[number].euler_angles[1],IMU[number].euler_angles[2]);
     }
 }
