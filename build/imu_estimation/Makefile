@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+imu_estimation/CMakeFiles/adaptive_osc.dir/rule:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f CMakeFiles/Makefile2 imu_estimation/CMakeFiles/adaptive_osc.dir/rule
+.PHONY : imu_estimation/CMakeFiles/adaptive_osc.dir/rule
+
+# Convenience name for target.
+adaptive_osc: imu_estimation/CMakeFiles/adaptive_osc.dir/rule
+
+.PHONY : adaptive_osc
+
+# fast build rule for target.
+adaptive_osc/fast:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f imu_estimation/CMakeFiles/adaptive_osc.dir/build.make imu_estimation/CMakeFiles/adaptive_osc.dir/build
+.PHONY : adaptive_osc/fast
+
+# Convenience name for target.
 imu_estimation/CMakeFiles/imu_estimation.dir/rule:
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f CMakeFiles/Makefile2 imu_estimation/CMakeFiles/imu_estimation.dir/rule
 .PHONY : imu_estimation/CMakeFiles/imu_estimation.dir/rule
@@ -181,6 +196,33 @@ imu_estimation: imu_estimation/CMakeFiles/imu_estimation.dir/rule
 imu_estimation/fast:
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f imu_estimation/CMakeFiles/imu_estimation.dir/build.make imu_estimation/CMakeFiles/imu_estimation.dir/build
 .PHONY : imu_estimation/fast
+
+src/adaptive_oscillator.o: src/adaptive_oscillator.cpp.o
+
+.PHONY : src/adaptive_oscillator.o
+
+# target to build an object file
+src/adaptive_oscillator.cpp.o:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f imu_estimation/CMakeFiles/adaptive_osc.dir/build.make imu_estimation/CMakeFiles/adaptive_osc.dir/src/adaptive_oscillator.cpp.o
+.PHONY : src/adaptive_oscillator.cpp.o
+
+src/adaptive_oscillator.i: src/adaptive_oscillator.cpp.i
+
+.PHONY : src/adaptive_oscillator.i
+
+# target to preprocess a source file
+src/adaptive_oscillator.cpp.i:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f imu_estimation/CMakeFiles/adaptive_osc.dir/build.make imu_estimation/CMakeFiles/adaptive_osc.dir/src/adaptive_oscillator.cpp.i
+.PHONY : src/adaptive_oscillator.cpp.i
+
+src/adaptive_oscillator.s: src/adaptive_oscillator.cpp.s
+
+.PHONY : src/adaptive_oscillator.s
+
+# target to generate assembly for a file
+src/adaptive_oscillator.cpp.s:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f imu_estimation/CMakeFiles/adaptive_osc.dir/build.make imu_estimation/CMakeFiles/adaptive_osc.dir/src/adaptive_oscillator.cpp.s
+.PHONY : src/adaptive_oscillator.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -220,9 +262,13 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... adaptive_osc"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... imu_estimation"
+	@echo "... src/adaptive_oscillator.o"
+	@echo "... src/adaptive_oscillator.i"
+	@echo "... src/adaptive_oscillator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

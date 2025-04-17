@@ -363,6 +363,19 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named common_genlisp
 
 # Build rule for target.
@@ -519,6 +532,19 @@ common_generate_messages_py/fast:
 .PHONY : common_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named _common_generate_messages_check_deps_gesture
+
+# Build rule for target.
+_common_generate_messages_check_deps_gesture: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _common_generate_messages_check_deps_gesture
+.PHONY : _common_generate_messages_check_deps_gesture
+
+# fast build rule for target.
+_common_generate_messages_check_deps_gesture/fast:
+	$(MAKE) -f common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/build.make common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/build
+.PHONY : _common_generate_messages_check_deps_gesture/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -636,19 +662,6 @@ common_genpy/fast:
 .PHONY : common_genpy/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named can_pub
 
 # Build rule for target.
@@ -660,6 +673,19 @@ can_pub: cmake_check_build_system
 can_pub/fast:
 	$(MAKE) -f can_receive/CMakeFiles/can_pub.dir/build.make can_receive/CMakeFiles/can_pub.dir/build
 .PHONY : can_pub/fast
+
+#=============================================================================
+# Target rules for targets named adaptive_osc
+
+# Build rule for target.
+adaptive_osc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 adaptive_osc
+.PHONY : adaptive_osc
+
+# fast build rule for target.
+adaptive_osc/fast:
+	$(MAKE) -f imu_estimation/CMakeFiles/adaptive_osc.dir/build.make imu_estimation/CMakeFiles/adaptive_osc.dir/build
+.PHONY : adaptive_osc/fast
 
 #=============================================================================
 # Target rules for targets named imu_estimation
@@ -702,6 +728,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _common_generate_messages_check_deps_motor"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... common_genlisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
@@ -714,6 +741,7 @@ help:
 	@echo "... common_generate_messages"
 	@echo "... _common_generate_messages_check_deps_data"
 	@echo "... common_generate_messages_py"
+	@echo "... _common_generate_messages_check_deps_gesture"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... common_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
@@ -723,8 +751,8 @@ help:
 	@echo "... common_geneus"
 	@echo "... common_gennodejs"
 	@echo "... common_genpy"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... can_pub"
+	@echo "... adaptive_osc"
 	@echo "... imu_estimation"
 .PHONY : help
 

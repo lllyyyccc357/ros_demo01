@@ -55,6 +55,7 @@ include common/CMakeFiles/common_generate_messages_cpp.dir/progress.make
 
 common/CMakeFiles/common_generate_messages_cpp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/data.h
 common/CMakeFiles/common_generate_messages_cpp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/motor.h
+common/CMakeFiles/common_generate_messages_cpp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/gesture.h
 
 
 /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/data.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -69,9 +70,16 @@ common/CMakeFiles/common_generate_messages_cpp: /home/ubuntulyc2/home/ROS_File/c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from common/motor.msg"
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/src/common && /home/ubuntulyc2/home/ROS_File/can_demo01/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/gesture.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/gesture.h: /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/gesture.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from common/gesture.msg"
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/src/common && /home/ubuntulyc2/home/ROS_File/can_demo01/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common -e /opt/ros/noetic/share/gencpp/cmake/..
+
 common_generate_messages_cpp: common/CMakeFiles/common_generate_messages_cpp
 common_generate_messages_cpp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/data.h
 common_generate_messages_cpp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/motor.h
+common_generate_messages_cpp: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/gesture.h
 common_generate_messages_cpp: common/CMakeFiles/common_generate_messages_cpp.dir/build.make
 
 .PHONY : common_generate_messages_cpp

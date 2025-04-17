@@ -52,6 +52,7 @@ add_message_files(
   FILES
   data.msg
   motor.msg
+  gesture.msg
 )
 
 ## Generate services in the 'srv' folder

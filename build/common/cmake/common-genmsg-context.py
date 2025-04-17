@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg;/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg"
+messages_str = "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg;/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg;/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg"
 services_str = ""
 pkg_name = "common"
 dependencies_str = "std_msgs"

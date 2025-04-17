@@ -3,6 +3,8 @@
   (:export
    "<DATA>"
    "DATA"
+   "<GESTURE>"
+   "GESTURE"
    "<MOTOR>"
    "MOTOR"
   ))

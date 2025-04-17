@@ -6,6 +6,8 @@
   :components ((:file "_package")
     (:file "data" :depends-on ("_package_data"))
     (:file "_package_data" :depends-on ("_package"))
+    (:file "gesture" :depends-on ("_package_gesture"))
+    (:file "_package_gesture" :depends-on ("_package"))
     (:file "motor" :depends-on ("_package_motor"))
     (:file "_package_motor" :depends-on ("_package"))
   ))

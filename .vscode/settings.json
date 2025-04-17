@@ -12,6 +12,7 @@
         "string_view": "cpp",
         "dense": "cpp",
         "alignedvector3": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "geometry": "cpp"
     }
 }

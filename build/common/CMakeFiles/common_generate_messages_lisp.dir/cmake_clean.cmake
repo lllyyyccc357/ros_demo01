@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/data.lisp"
+  "/home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/gesture.lisp"
   "/home/ubuntulyc2/home/ROS_File/can_demo01/devel/share/common-lisp/ros/common/msg/motor.lisp"
   "CMakeFiles/common_generate_messages_lisp"
 )

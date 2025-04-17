@@ -3,6 +3,7 @@
 
 imu_estimation/CMakeFiles/imu_estimation.dir/src/main.cpp.o
  /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/data.h
+ /home/ubuntulyc2/home/ROS_File/can_demo01/devel/include/common/gesture.h
  /home/ubuntulyc2/home/ROS_File/can_demo01/src/imu_estimation/include/imu_estimation/IMU_thomasMag.h
  /home/ubuntulyc2/home/ROS_File/can_demo01/src/imu_estimation/include/imu_estimation/Quaterion_func_scalar4.h
  /home/ubuntulyc2/home/ROS_File/can_demo01/src/imu_estimation/src/main.cpp

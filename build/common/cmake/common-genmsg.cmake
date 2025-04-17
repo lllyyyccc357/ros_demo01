@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "common: 2 messages, 0 services")
+message(STATUS "common: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -27,6 +27,11 @@ add_custom_target(_common_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "common" "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg" ""
 )
 
+get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg" NAME_WE)
+add_custom_target(_common_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "common" "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -41,6 +46,12 @@ _generate_msg_cpp(common
 )
 _generate_msg_cpp(common
   "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/common
+)
+_generate_msg_cpp(common
+  "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/common
@@ -64,6 +75,8 @@ get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/
 add_dependencies(common_generate_messages_cpp _common_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg" NAME_WE)
 add_dependencies(common_generate_messages_cpp _common_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg" NAME_WE)
+add_dependencies(common_generate_messages_cpp _common_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(common_gencpp)
@@ -82,6 +95,12 @@ _generate_msg_eus(common
 )
 _generate_msg_eus(common
   "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/common
+)
+_generate_msg_eus(common
+  "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/common
@@ -105,6 +124,8 @@ get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/
 add_dependencies(common_generate_messages_eus _common_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg" NAME_WE)
 add_dependencies(common_generate_messages_eus _common_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg" NAME_WE)
+add_dependencies(common_generate_messages_eus _common_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(common_geneus)
@@ -123,6 +144,12 @@ _generate_msg_lisp(common
 )
 _generate_msg_lisp(common
   "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/common
+)
+_generate_msg_lisp(common
+  "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/common
@@ -146,6 +173,8 @@ get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/
 add_dependencies(common_generate_messages_lisp _common_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg" NAME_WE)
 add_dependencies(common_generate_messages_lisp _common_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg" NAME_WE)
+add_dependencies(common_generate_messages_lisp _common_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(common_genlisp)
@@ -164,6 +193,12 @@ _generate_msg_nodejs(common
 )
 _generate_msg_nodejs(common
   "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/common
+)
+_generate_msg_nodejs(common
+  "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/common
@@ -187,6 +222,8 @@ get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/
 add_dependencies(common_generate_messages_nodejs _common_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg" NAME_WE)
 add_dependencies(common_generate_messages_nodejs _common_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg" NAME_WE)
+add_dependencies(common_generate_messages_nodejs _common_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(common_gennodejs)
@@ -209,6 +246,12 @@ _generate_msg_py(common
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/common
 )
+_generate_msg_py(common
+  "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/common
+)
 
 ### Generating Services
 
@@ -227,6 +270,8 @@ add_dependencies(common_generate_messages common_generate_messages_py)
 get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg" NAME_WE)
 add_dependencies(common_generate_messages_py _common_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg" NAME_WE)
+add_dependencies(common_generate_messages_py _common_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg" NAME_WE)
 add_dependencies(common_generate_messages_py _common_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -55,6 +55,7 @@ include common/CMakeFiles/common_generate_messages_py.dir/progress.make
 
 common/CMakeFiles/common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_data.py
 common/CMakeFiles/common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_motor.py
+common/CMakeFiles/common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_gesture.py
 common/CMakeFiles/common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/__init__.py
 
 
@@ -68,15 +69,22 @@ common/CMakeFiles/common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/ca
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG common/motor"
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg
 
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_gesture.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_gesture.py: /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG common/gesture"
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg -Icommon:/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p common -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg
+
 /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/__init__.py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_data.py
 /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/__init__.py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_motor.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for common"
+/home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/__init__.py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_gesture.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntulyc2/home/ROS_File/can_demo01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for common"
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build/common && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg --initpy
 
 common_generate_messages_py: common/CMakeFiles/common_generate_messages_py
 common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_data.py
 common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_motor.py
+common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/_gesture.py
 common_generate_messages_py: /home/ubuntulyc2/home/ROS_File/can_demo01/devel/lib/python3/dist-packages/common/msg/__init__.py
 common_generate_messages_py: common/CMakeFiles/common_generate_messages_py.dir/build.make
 

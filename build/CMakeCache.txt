@@ -321,12 +321,6 @@ GMOCK_MAIN_LIBRARY_DEBUG:FILEPATH=GMOCK_MAIN_LIBRARY_DEBUG-NOTFOUND
 //The directory containing a CMake configuration file for GMock.
 GMock_DIR:PATH=GMock_DIR-NOTFOUND
 
-//Value Computed by CMake
-GPIO_control_BINARY_DIR:STATIC=/home/ubuntulyc2/home/ROS_File/can_demo01/build/GPIO_control
-
-//Value Computed by CMake
-GPIO_control_SOURCE_DIR:STATIC=/home/ubuntulyc2/home/ROS_File/can_demo01/src/GPIO_control
-
 //Path to a file.
 GTEST_INCLUDE_DIR:PATH=/usr/include
 

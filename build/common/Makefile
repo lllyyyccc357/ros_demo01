@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/ubuntulyc2/home/ROS_File/can_demo01/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -113,6 +101,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -124,16 +123,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -256,6 +256,21 @@ std_msgs_generate_messages_cpp: common/CMakeFiles/std_msgs_generate_messages_cpp
 std_msgs_generate_messages_cpp/fast:
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f common/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make common/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f CMakeFiles/Makefile2 common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 common/CMakeFiles/common_genlisp.dir/rule:
@@ -438,6 +453,21 @@ common_generate_messages_py/fast:
 .PHONY : common_generate_messages_py/fast
 
 # Convenience name for target.
+common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/rule:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f CMakeFiles/Makefile2 common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/rule
+.PHONY : common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/rule
+
+# Convenience name for target.
+_common_generate_messages_check_deps_gesture: common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/rule
+
+.PHONY : _common_generate_messages_check_deps_gesture
+
+# fast build rule for target.
+_common_generate_messages_check_deps_gesture/fast:
+	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/build.make common/CMakeFiles/_common_generate_messages_check_deps_gesture.dir/build
+.PHONY : _common_generate_messages_check_deps_gesture/fast
+
+# Convenience name for target.
 common/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f CMakeFiles/Makefile2 common/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : common/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -572,28 +602,12 @@ common_genpy/fast:
 	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f common/CMakeFiles/common_genpy.dir/build.make common/CMakeFiles/common_genpy.dir/build
 .PHONY : common_genpy/fast
 
-# Convenience name for target.
-common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f CMakeFiles/Makefile2 common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntulyc2/home/ROS_File/can_demo01/build && $(MAKE) -f common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make common/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
@@ -604,6 +618,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _common_generate_messages_check_deps_motor"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... common_genlisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
@@ -617,6 +633,8 @@ help:
 	@echo "... common_generate_messages"
 	@echo "... _common_generate_messages_check_deps_data"
 	@echo "... common_generate_messages_py"
+	@echo "... install/strip"
+	@echo "... _common_generate_messages_check_deps_gesture"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... common_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
@@ -626,8 +644,6 @@ help:
 	@echo "... common_geneus"
 	@echo "... common_gennodejs"
 	@echo "... common_genpy"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
 .PHONY : help
 
 

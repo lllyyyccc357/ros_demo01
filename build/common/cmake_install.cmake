@@ -41,6 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common/msg" TYPE FILE FILES
     "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/data.msg"
     "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/motor.msg"
+    "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/msg/gesture.msg"
     )
 endif()
 
@@ -89,5 +90,9 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common" TYPE FILE FILES "/home/ubuntulyc2/home/ROS_File/can_demo01/src/common/package.xml")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/common" TYPE PROGRAM FILES "/home/ubuntulyc2/home/ROS_File/can_demo01/build/common/catkin_generated/installspace/param_loader.py")
 endif()
 

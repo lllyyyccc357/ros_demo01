@@ -60,3 +60,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gpio_control" TYPE PROGRAM FILES "/home/ubuntulyc2/home/ROS_File/can_demo01/build/gpio_control/catkin_generated/installspace/motor_sub.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gpio_control" TYPE PROGRAM FILES "/home/ubuntulyc2/home/ROS_File/can_demo01/build/gpio_control/catkin_generated/installspace/key_detect.py")
+endif()
+
