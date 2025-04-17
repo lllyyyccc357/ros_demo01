@@ -1,0 +1,8 @@
+prefix=/home/ubuntulyc2/home/ROS_File/can_demo01/install
+
+Name: gpio_control
+Description: Description of gpio_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

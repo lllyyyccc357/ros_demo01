@@ -1,0 +1,2 @@
+can_receive:common:gpio_control:imu_estimation
+-DCATKIN_DEVEL_PREFIX=/home/ubuntulyc2/home/ROS_File/can_demo01/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntulyc2/home/ROS_File/can_demo01/install -G Unix Makefiles

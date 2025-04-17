@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
         IMU[i].NUM=i;
     }
     // 初始化 ROS 节点
-    ros::init(argc, argv, "IMU_subMes_pubPos");
+    ros::init(argc, argv, "IMU_subMes_pubGes");
     ros::NodeHandle nh;
     ros::Subscriber sub_gyro = nh.subscribe<common::data>("gyro_msg",100,doGyro);
     ros::Subscriber sub_acc = nh.subscribe<common::data>("acc_msg",100,doAcc);

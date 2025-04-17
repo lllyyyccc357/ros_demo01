@@ -15,10 +15,15 @@ cmake ..
 sudo make install
 sudo cp -r /usr/include/eigen3/Eigen /usr/include 
 ~~~
-## use
+## compile
 ~~~
 cd ros_demo01
 catkin_make --pkg common
 catkin_make
 ~~~
 
+## use
+~~~
+roscore
+
+~~~
